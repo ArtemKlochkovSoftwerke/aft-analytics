@@ -1,0 +1,143 @@
+@font-face {
+  font-family: RobotoSlab;
+  src: local("RobotoSlab"), url("@/assets/font/RobotoSlab-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: IBMPlexMono;
+  src: url("@/assets/font/IBMPlexMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: PTSansCaption;
+  src: url("@/assets/font/PTSansCaption-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Kanit;
+  src: url("@/assets/font/Kanit-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("@/assets/font/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+
+  --font-family-main: "RobotoSlab", sans-serif;
+  --font-family-secondary: "IBMPlexMono", sans-serif;
+  --font-family-small-text: "PTSansCaption", sans-serif;
+  --font-family-button: "Kanit", sans-serif;
+  --font-family-footer: "Montserrat", sans-serif;
+
+
+  --font-size-h1: 40px;
+  --font-line-h1: 52px;
+  --font-weight-h1: 400;
+  --font-h1: var(--font-weight-h1) var(--font-size-h1) / var(--font-line-h1) var(--font-family-main);
+
+  --font-size-h2: 24px;
+  --font-line-h2: 31px;
+  --font-weight-h2: 400;
+  --font-h2: var(--font-weight-h2) var(--font-size-h2) / var(--font-line-h2) var(--font-family-secondary);
+
+  --font-size-h3: 20px;
+  --font-line-h3: 31px;
+  --font-weight-h3: 400;
+  --font-h3: var(--font-weight-h3) var(--font-size-h3) / var(--font-line-h3) var(--font-family-secondary);
+
+  --font-size-h3-secondary: 16px;
+  --font-line-h3-secondary: 21px;
+  --font-weight-h3-secondary: 400;
+  --font-h3-secondary: var(--font-weight-h3-secondary) var(--font-size-h3-secondary) / var(--font-line-h3-secondary) var(--font-family-secondary);
+
+  --font-size-h4: 14px;
+  --font-line-h4: 18px;
+  --font-weight-h4: 400;
+  --font-h4: var(--font-weight-h4) var(--font-size-h4) / var(--font-line-h4) var(--font-family-small-text);
+
+  --font-size-btn-1: 20px;
+  --font-line-btn-1: 30px;
+  --font-weight-btn-1: 400;
+  --font-btn-1: var(--font-weight-btn-1) var(--font-size-btn-1) / var(--font-line-btn-1) var(--font-family-button);
+
+  --font-size-btn-2: 16px;
+  --font-line-btn-2: 24px;
+  --font-weight-btn-2: 400;
+  --font-btn-2: var(--font-weight-btn-2) var(--font-size-btn-2) / var(--font-line-btn-2) var(--font-family-button);
+
+  --font-size-footer: 14px;
+  --font-line-footer: 17px;
+  --font-weight-footer: 700;
+  --font-footer: var(--font-weight-footer) var(--font-size-footer) / var(--font-line-footer) var(--font-family-footer);
+
+  // MOBILE
+
+  --font-size-h1-mobile: 26px;
+  --font-line-h1-mobile: 34px;
+  --font-weight-h1-mobile: 500;
+  --font-h1-mobile: var(--font-weight-h1-mobile) var(--font-size-h1-mobile) / var(--font-line-h1-mobile) var(--font-family-main);
+
+  --font-size-h2-mobile: 22px;
+  --font-line-h2-mobile: 29px;
+  --font-weight-h2-mobile: 400;
+  --font-h2-mobile: var(--font-weight-h2-mobile) var(--font-size-h2-mobile) / var(--font-line-h2-mobile) var(--font-family-secondary);
+
+  --font-size-h3-mobile: 20px;
+  --font-line-h3-mobile: 26px;
+  --font-weight-h3-mobile: 400;
+  --font-h3-mobile: var(--font-weight-h3-mobile) var(--font-size-h3-mobile) / var(--font-line-h3-mobile) var(--font-family-secondary);
+
+  --font-size-h3-secondary-mobile: 16px;
+  --font-line-h3-secondary-mobile: 21px;
+  --font-weight-h3-secondary-mobile: 400;
+  --font-h3-secondary-mobile: var(--font-weight-h3-secondary-mobile) var(--font-size-h3-secondary-mobile) / var(--font-line-h3-secondary-mobile) var(--font-family-secondary);
+
+  --font-size-h4-mobile: 14px;
+  --font-line-h4-mobile: 18px;
+  --font-weight-h4-mobile: 400;
+  --font-h4-mobile: var(--font-weight-h4-mobile) var(--font-size-h4-mobile) / var(--font-line-h4-mobile) var(--font-family-small-text);
+
+  --font-size-btn-1-mobile: 16px;
+  --font-line-btn-1-mobile: 24px;
+  --font-weight-btn-1-mobile: 400;
+  --font-btn-1-mobile: var(--font-weight-btn-1-mobile) var(--font-size-btn-1-mobile) / var(--font-line-btn-1-mobile) var(--font-family-button);
+
+  //--font-size-btn-2: 16px;
+  //--font-line-btn-2: 24px;
+  //--font-weight-btn-2: 400;
+  //--font-btn-2: var(--font-weight-btn-2) var(--font-size-btn-2) / var(--font-line-btn-2) var(--font-family-button);
+
+  --font-size-footer-mobile: 14px;
+  --font-line-footer-mobile: 17px;
+  --font-weight-footer-mobile: 700;
+  --font-footer-mobile: var(--font-weight-footer-mobile) var(--font-size-footer-mobile) / var(--font-line-footer-mobile) var(--font-family-footer);
+
+  --aft-color-black: #000;
+
+  --aft-bg-light-blue: #F5F9FF;
+
+
+  --aft-space-1: 4px;
+  --aft-space-2: 8px;
+  --aft-space-3: 12px;
+  --aft-space-4: 16px;
+  --aft-space-5: 24px;
+  --aft-space-6: 30px;
+  --aft-space-7: 35px;
+  --aft-space-8: 40px;
+
+  --space-container-md: 55px;
+  --space-container-lg: 110px;
+}

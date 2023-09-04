@@ -1,0 +1,21 @@
+@import "base/reset";
+@import "base/variables";
+
+@import "components/banner";
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  padding-top: 152px;
+
+  @media (max-width: 780px) {
+    padding-top: 121px;
+  }
+}
