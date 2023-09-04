@@ -6,7 +6,7 @@ import Section from '@/UI/components/Section/Section.vue'
         <div class="aft-hero__container">
             <h1>Организация бизнеса</h1>
             <p>Одностраничный блокнот, революционизирующий стратегическое планирование</p>
-            <div>Попробовать</div>
+            <a class="aft-hero__link" href="#">Попробовать</a>
         </div>
     </div>
 </template>
@@ -23,7 +23,7 @@ import Section from '@/UI/components/Section/Section.vue'
             max-width: 500px;
             background-color: #fff;
             margin: 0 auto;
-            padding: 0 var(--aft-space-5);
+            padding: var(--aft-space-4) var(--aft-space-5);
             text-align: center;
 
             @media screen and (max-width: 780px) {
@@ -50,6 +50,11 @@ import Section from '@/UI/components/Section/Section.vue'
 
         div {
             font: var(--font-h3-secondary);
+        }
+        &__link {
+            font: var(--font-h3);
+            text-decoration: none;
+            color: #023E8A;
         }
     }
 </style>

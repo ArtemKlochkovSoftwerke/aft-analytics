@@ -103,6 +103,10 @@ defineProps({
             display: flex;
             align-items: center;
             gap: var(--aft-space-5);
+
+            @media screen and (max-width: 780px) {
+                justify-content: center;
+            }
         }
     }
 </style>

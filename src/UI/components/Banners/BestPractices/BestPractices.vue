@@ -85,7 +85,8 @@ defineProps({
     }
 
     &__text {
-        font: var(--font-h3-secondary)
+        font: var(--font-h3-secondary);
+        text-align: center;
     }
 
     &__icon {

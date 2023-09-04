@@ -101,6 +101,9 @@ defineProps({
 
     &__title {
         font: var(--font-h2);
+        @media screen and (max-width: 780px){
+            font: var(--font-h2-mobile);
+        }
     }
 
     &__title-main {

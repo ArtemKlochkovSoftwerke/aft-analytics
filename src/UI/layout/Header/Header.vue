@@ -12,26 +12,21 @@ const scroll = reactive({ isHidden: false, lastPosition: 0 });
 
 const toggleVisibility = () => {
     isShown.value = !isShown.value;
-    console.log(isShown)
 }
 
 
 
 const handleScroll = () => {
     isShown.value = false;
-    if (scroll.lastPosition >= window.scrollY) {
+    if (window.scrollY <= 200) {
         scroll.isHidden = false;
-
-    } else {
-        scroll.isHidden = true
-    }
+    } else scroll.isHidden = scroll.lastPosition < window.scrollY;
     
 
     scroll.lastPosition = window.scrollY;
 }
 
 const handleMenuClick = ({target}) => {
-    console.log('test', isShown.value)
     if (!isShown.value || target.closest('.hamburger-lines')) {
         return
     }
@@ -83,7 +78,7 @@ onMounted(() => {
         <Section class="fixed-height">
             <div class="aft-header-main">
                 <div class="aft-header-main__mobile">
-                    <div class="hamburger-lines" @click="toggleVisibility">
+                    <div class="hamburger-lines" @click="toggleVisibility" :class="{ active: isShown }">
                         <span class="line line1"></span>
                         <span class="line line2"></span>
                         <span class="line line3"></span>
@@ -313,12 +308,14 @@ onMounted(() => {
             flex-direction: column;
             justify-content: space-between;
 
+
+
             & .line {
                 display: block;
                 height: 4px;
                 width: 100%;
                 border-radius: 10px;
-                background: #0e2431;
+                background: #58C4A9;
             }
 
             & .line1 {
@@ -333,6 +330,18 @@ onMounted(() => {
             & .line3 {
                 transform-origin: 0% 100%;
                 transition: transform 0.4s ease-in-out;
+            }
+
+            &.active .line1 {
+                transform: rotate(45deg);
+            }
+
+            &.active .line2 {
+                transform: scaleY(0);
+            }
+
+            &.active .line3 {
+                transform: rotate(-45deg);
             }
         }
 

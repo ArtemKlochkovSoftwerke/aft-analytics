@@ -28,7 +28,7 @@ import { reactive, computed } from 'vue'
             padding: 55px 110px;
 
             @media screen and (max-width: 780px) {
-                padding: 16px;
+                padding: 32px 16px;
             }
         }
 
@@ -36,7 +36,7 @@ import { reactive, computed } from 'vue'
             padding: 55px;
 
             @media screen and (max-width: 780px) {
-                padding: 16px;
+                padding: 32px 16px;
             }
         }
     }
