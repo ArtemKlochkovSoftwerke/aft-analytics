@@ -26,7 +26,7 @@ defineExpose({
                 <p class="memberDialog__call-us">Или позвоните нам</p>
                 <a class="memberDialog__phone" href=":tel+79910900000">+7 991 090 00 00</a>
                 <ul class="memberDialog__list">
-                    <li class="memberDialog__list-item">8 a.m. – 7 p.m.ET</li>
+                    <li class="memberDialog__list-item">8 a.m. – 7 p.m. ET</li>
                     <li class="memberDialog__list-item">8 a.m. – 5 p.m. GMT</li>
                     <li class="memberDialog__list-item">Monday through Friday</li>
                 </ul>

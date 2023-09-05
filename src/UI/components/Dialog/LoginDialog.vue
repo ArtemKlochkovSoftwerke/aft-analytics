@@ -27,7 +27,7 @@ defineExpose({
 
             <div class="form-field">
                 <div class="form-field__label">Логин</div>
-                <el-input v-model="login.mail" placeholder="Ведите имя или почту    " />
+                <el-input v-model="login.mail" placeholder="Введите имя или почту    " />
             </div>
 
             <div class="form-field">

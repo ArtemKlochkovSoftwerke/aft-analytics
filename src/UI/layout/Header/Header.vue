@@ -85,7 +85,7 @@ onMounted(() => {
                         <RouterLink to="/" class="aft-header-top__link">Карьера</RouterLink>
                     </li>
                 </ul>
-                <span @click="openDialog">Личный кабинет</span>
+                <span class="aft-header-top__account" @click="openDialog">Личный кабинет</span>
             </Section>
         </nav>
         <Section class="fixed-height">
@@ -197,6 +197,13 @@ onMounted(() => {
                 font: var(--font-h4);
                 text-decoration: none;
                 color: var(--aft-color-black);
+            }
+
+            &__account {
+                font: var(--font-h4);
+                text-decoration: none;
+                color: var(--aft-color-black);
+                cursor: pointer;
             }
         }
 

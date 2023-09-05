@@ -15,6 +15,7 @@ import Section from '@/UI/components/Section/Section.vue'
     .aft-hero {
         background: url('@/assets/img/HeroBG.svg');
         padding: 110px;
+        background-size: cover;
 
         @media screen and (max-width: 780px) {
             padding: 125px 16px 70px;
