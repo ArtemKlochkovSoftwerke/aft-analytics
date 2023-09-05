@@ -3,6 +3,10 @@ defineProps({
     type: {
         type: String,
         default: 'primary',
+    },
+    size: {
+        type: String,
+        default: 'normal'
     }
 })
 
@@ -11,7 +15,7 @@ defineProps({
 
 
 <template>
-    <button class="aft-button" :class="`aft-button--${type}`">
+    <button class="aft-button" :class="`aft-button--${type} aft-button--${size}`">
         <slot></slot>
     </button>
 </template>
@@ -50,6 +54,10 @@ defineProps({
 
         &:hover {
             box-shadow: 4px 4px 4px 0px #00000040;
+        }
+
+        &--full {
+            width: 100%;
         }
     }
 </style>

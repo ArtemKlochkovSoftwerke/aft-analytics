@@ -2,12 +2,17 @@
 import Section from '@/UI/components/Section/Section.vue';
 import AFT from '@/assets/icons/aft.svg';
 import AftButton from '@/UI/ui-library/Button.vue';
+import LoginDialog from '@/UI/components/Dialog/LoginDialog.vue';
+import Member from '@/UI/components/Dialog/Member.vue';
 import { RouterLink } from 'vue-router';
 import { ref, onMounted, reactive, onUnmounted } from 'vue';
 
 
 let isShown = ref(false);
+let loginDialog = ref(null);
+let member = ref(null);
 const scroll = reactive({ isHidden: false, lastPosition: 0 });
+
 
 
 const toggleVisibility = () => {
@@ -34,9 +39,17 @@ const handleMenuClick = ({target}) => {
 
     if (target.tagName !== 'a' && !target.closest('.mobile-navigation')) {
         isShown.value = false;
-        return;
     }
 }
+
+const openDialog = () => {
+    loginDialog.value.open();
+}
+
+const openDialog2 = () => {
+    member.value.open();
+}
+
 
 
 onUnmounted(() => { 
@@ -72,7 +85,7 @@ onMounted(() => {
                         <RouterLink to="/" class="aft-header-top__link">Карьера</RouterLink>
                     </li>
                 </ul>
-                <span><RouterLink to="/" class="aft-header-top__link">Личный кабинет</RouterLink></span>
+                <span @click="openDialog">Личный кабинет</span>
             </Section>
         </nav>
         <Section class="fixed-height">
@@ -112,13 +125,13 @@ onMounted(() => {
                         <el-icon size="20" :color="color">
                             <Search />
                         </el-icon>
-                        <AftButton>Стать членом</AftButton>
+                        <AftButton @click="openDialog2">Стать членом</AftButton>
                     </div>
                     <span class="aft-header-main__phone">or call  +7 991 090 00 00</span>
                 </div>
 
                 <div class="aft-header-main__contact-mobile">
-                    <div><AftButton>Стать членом</AftButton></div>
+                    <div><AftButton @click="openDialog2">Стать членом</AftButton></div>
                     <el-icon size="20" :color="color">
                         <Search />
                     </el-icon>
@@ -126,6 +139,8 @@ onMounted(() => {
             </div>
         </Section>
     </header>
+    <LoginDialog ref="loginDialog"/>
+    <Member ref="member"/>
 </template>
 
 <style lang="scss">
