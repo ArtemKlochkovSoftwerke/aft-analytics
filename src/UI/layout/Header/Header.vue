@@ -144,6 +144,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
     .aft-header {
         position: fixed;
         top: 0;
@@ -156,11 +157,15 @@ onMounted(() => {
             &.isHidden {
                 transform: translateY(-100%);
             }
+
+        .aft-button {
+            white-space: nowrap;
+        }
         &-top {
             padding: var(--aft-space-4) var(--aft-space-5);
             background: #FAFAFA;
 
-            @media screen and (max-width: 780px){
+            @include devices(tablet-big-max) {
                 padding: 0 var(--aft-space-4) 0 0;
             }
 
@@ -170,7 +175,7 @@ onMounted(() => {
                 justify-content: flex-end;
                 gap: var(--aft-space-5);
 
-                @media screen and (max-width: 780px){
+                @include devices(tablet-big-max) {
                     justify-content: space-between;
                 }
             }
@@ -178,7 +183,7 @@ onMounted(() => {
             &__logo {
                 width: 150px;
 
-                @media screen and (min-width: 780px){
+                @include devices(tablet-big-min) {
                     display: none;
                 }
             }
@@ -188,7 +193,7 @@ onMounted(() => {
                 justify-content: flex-end;
                 gap: var(--aft-space-5);
 
-                @media screen and (max-width: 780px){
+                @include devices(tablet-big-max){
                     display: none;
                 }
             }
@@ -213,9 +218,10 @@ onMounted(() => {
             gap: 20px;
             position: relative;
             background-color: #fff;
-            
+            padding-right: 16px;
 
-            @media screen and (max-width: 780px){
+
+            @include devices(tablet-big-max){
                 padding: 16px 16px;
             }
 
@@ -223,7 +229,7 @@ onMounted(() => {
                 display: flex;
                 align-items: center;
                 gap: 20px;
-                @media screen and (max-width: 780px){
+                @include devices(tablet-big-max){
                     display: none;
                 }
 
@@ -232,13 +238,13 @@ onMounted(() => {
             &__logo {
                 width: 250px;
 
-                @media screen and (max-width: 780px){
+                @include devices(tablet-big-max){
                     display: none;
                 }
             }
 
             &__mobile {
-                @media screen and (min-width: 780px){
+                @include devices(tablet-big-min){
                     display: none;
                 }
                 margin-right: auto;
@@ -286,7 +292,7 @@ onMounted(() => {
                 text-decoration: none;
                 color: #000;
 
-                @media screen and (max-width: 780px){
+                @include devices(tablet-big-max){
                     font: var(--font-h3-mobile);
                 }
             }
@@ -301,7 +307,7 @@ onMounted(() => {
                     margin-left: 16px;
                 }
 
-                @media screen and (max-width: 780px){
+                @include devices(tablet-big-max){
                     display: none;
                 }
 
@@ -311,7 +317,7 @@ onMounted(() => {
                 display: flex;
                 gap: 10px;
                 align-items: center;
-                @media screen and (min-width: 780px){
+                @include devices(tablet-big-min){
                     display: none;
                 }
             }

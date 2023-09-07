@@ -25,9 +25,20 @@ defineProps({
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
     .aft-ideas {
         background-image: url("src/assets/img/banner/bannerBG.svg");
         background-size: cover;
+
+        --aft-ideas-padding: 30px;
+
+        @include devices(desktop-max) {
+            --aft-ideas-padding: 25px;
+        }
+
+        @include devices(tablet-big-max) {
+            --aft-ideas-padding: 20px;
+        }
 
         &__container {
             //padding: 55px 110px;
@@ -38,7 +49,7 @@ defineProps({
             margin-bottom: 55px;
             color: #0E3365;
 
-            @media screen and (max-width: 780px) {
+            @include devices(tablet-max) {
                 font: var(--font-h1-mobile);
                 text-align: center;
                 margin-bottom: var(--aft-space-3);
@@ -49,12 +60,12 @@ defineProps({
             display: grid;
             grid-template-columns: 1fr;
 
-            @media (min-width: 781px) {
+            @include devices(tablet-min) {
                 grid-template-columns: repeat(3,1fr);
             }
 
             &-item {
-                @media (max-width: 780px) {
+                @include devices(tablet-max) {
                     padding: 20px 0;
                     & {
                         border-top: 1px solid #58C4A9;
@@ -67,7 +78,7 @@ defineProps({
                 div {
                     background: #E4E5EF;
                     font: var(--font-h3);
-                    padding: 30px;
+                    padding: var(--aft-ideas-padding);
                     text-align: center;
                     border-radius: 10px;
                     transition: background-color 0.3s;
@@ -78,23 +89,23 @@ defineProps({
                     }
                 }
 
-                @media (min-width: 781px) {
+                @include devices(tablet-min) {
                     &:nth-child(1), &:nth-child(2), &:nth-child(3) {
                         border-bottom: 2px solid #58C4A9;
-                        padding-bottom: 30px;
+                        padding-bottom: var(--aft-ideas-padding);
                     }
 
                     &:nth-child(4), &:nth-child(5), &:nth-child(6) {
-                        padding-top: 30px;
+                        padding-top: var(--aft-ideas-padding);
                     }
 
                     &:nth-child(3n - 2), &:nth-child(3n - 1) {
                         border-right: 2px solid #58C4A9;
-                        padding-right: 30px;
+                        padding-right: var(--aft-ideas-padding);
                     }
 
                     &:nth-child(3n - 1), &:nth-child(3n) {
-                        padding-left: 30px;
+                        padding-left: var(--aft-ideas-padding);
                     }
                 }
 
@@ -105,7 +116,7 @@ defineProps({
             text-align: center;
             margin-top: 55px;
 
-            @media screen and (max-width: 780px) {
+            @include devices(tablet-max) {
                 margin-top: var(--aft-space-3);
             }
         }

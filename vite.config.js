@@ -19,7 +19,10 @@ export default defineConfig({
   css: {
     loaderOptions: {
       scss: {
-        additionalData: `@import "~@/styles/main.scss";`
+        additionalData: `
+              @import "@/styles/main.scss";
+              @import "@/styles/mixins.scss as *";
+            `
       }
     }
   }

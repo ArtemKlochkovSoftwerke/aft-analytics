@@ -38,6 +38,7 @@ defineProps({
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
 .aft-instruments {
     background-color: var(--aft-bg-light-blue);
 
@@ -47,7 +48,7 @@ defineProps({
         grid-template-columns: 1fr;
         gap: 24px;
 
-        @media screen and (min-width: 780px){
+        @include devices(tablet-min){
             grid-template-columns: 1fr 1fr;
         }
     }
@@ -57,7 +58,7 @@ defineProps({
         flex-direction: column;
         gap: 30px;
 
-        @media screen and (min-width: 780px){
+        @include devices(tablet-min){
             gap: 50px;
         }
     }
@@ -67,7 +68,7 @@ defineProps({
         gap: 100px;
         align-items: center;
 
-        @media screen and (min-width: 780px){
+        @include devices(tablet-min){
             grid-template-columns: 1fr 1fr;
         }
 
@@ -81,7 +82,7 @@ defineProps({
     &__title {
         font: var(--font-h1);
 
-        @media screen and (max-width: 780px) {
+        @include devices(tablet-max) {
             font: var(--font-h1-mobile);
         }
     }
@@ -90,7 +91,7 @@ defineProps({
         font: var(--font-h2);
         margin-top: 20px;
 
-        @media screen and (max-width: 780px) {
+        @include devices(tablet-max) {
             font: var(--font-h2-mobile);
         }
     }
@@ -114,7 +115,7 @@ defineProps({
         width: 100%;
         font: var(--font-h3);
 
-        @media screen and (min-width: 780px) {
+        @include devices(tablet-min) {
             text-align: center;
         }
     }

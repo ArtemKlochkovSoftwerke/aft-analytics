@@ -48,6 +48,7 @@ defineProps({
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
 .aft-our-team {
     background-image: url("src/assets/img/banner/bannerBG.svg");
     background-size: cover;
@@ -58,7 +59,7 @@ defineProps({
         color: #0E3365;
         margin-bottom: 55px;
 
-        @media screen and (max-width: 780px) {
+        @include devices(tablet-max) {
             font: var(--font-h1-mobile);
             margin-bottom: 32px;
         }
@@ -69,7 +70,7 @@ defineProps({
         gap: 50px;
         justify-content: space-between;
 
-        @media screen and (max-width: 780px) {
+        @include devices(tablet-big-max) {
             flex-direction: column;
             align-items: center;
         }

@@ -34,6 +34,7 @@ defineProps({
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
     .aft-banner {
         background-color: var(--aft-bg-light-blue);
 
@@ -42,7 +43,7 @@ defineProps({
             flex-direction: column;
             gap: 55px;
 
-            @media screen and (max-width: 780px) {
+            @include devices(tablet-max) {
                 gap: var(--aft-space-3);
             }
         }
@@ -60,20 +61,24 @@ defineProps({
             gap: 100px;
             align-items: center;
 
-            @media (max-width: 780px) {
+            @include devices(desktop-max) {
+                gap: 50px;
+            }
+
+            @include devices(tablet-max) {
                 grid-template-columns: 1fr;
                 gap: var(--aft-space-4);
             }
 
             &.-reversed {
                 grid-template-columns: 6fr 5fr;
-                @media (max-width: 780px) {
+                @include devices(tablet-max) {
                     grid-template-columns: 1fr;
                 }
                 .aft-banner__content {
                     order: -1;
 
-                    @media (max-width: 780px) {
+                    @include devices(tablet-max) {
                         order: 1;
                     }
                 }
@@ -83,7 +88,12 @@ defineProps({
         &__title {
             font: var(--font-h1);
 
-            @media screen and (max-width: 780px) {
+            @include devices(desktop-max) {
+                font: var(--font-h1-desktop);
+                text-align: center;
+            }
+
+            @include devices(tablet-max) {
                 font: var(--font-h1-mobile);
                 text-align: center;
             }
@@ -93,7 +103,12 @@ defineProps({
             font: var(--font-h3);
             margin: 20px 0;
 
-            @media screen and (max-width: 780px) {
+            @include devices(desktop-max) {
+                font: var(--font-h3-desktop);
+                text-align: center;
+            }
+
+            @include devices(tablet-max) {
                 font: var(--font-h3-mobile);
                 text-align: center;
             }
@@ -104,7 +119,7 @@ defineProps({
             align-items: center;
             gap: var(--aft-space-5);
 
-            @media screen and (max-width: 780px) {
+            @include devices(tablet-max) {
                 justify-content: center;
             }
         }

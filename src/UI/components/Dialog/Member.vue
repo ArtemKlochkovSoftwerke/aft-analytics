@@ -65,6 +65,7 @@ defineExpose({
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
 .memberDialog {
     max-width: 900px;
     --el-bg-color: #e2e2e5;
@@ -109,7 +110,7 @@ defineExpose({
         grid-template-columns: 1fr 2fr;
         gap: 20px;
 
-        @media screen and (max-width: 780px) {
+        @include devices(tablet-max) {
             grid-template-columns: 1fr;
             gap: 36px;
         }
@@ -127,7 +128,7 @@ defineExpose({
         grid-auto-rows: max-content;
         gap: 36px;
 
-        @media screen and (max-width: 780px) {
+        @include devices(tablet-max) {
             grid-template-columns: 1fr;
         }
 
@@ -145,7 +146,7 @@ defineExpose({
     }
 
     .btn-group {
-        @media screen and (max-width: 780px) {
+        @include devices(tablet-max) {
             text-align: center;
         }
     }

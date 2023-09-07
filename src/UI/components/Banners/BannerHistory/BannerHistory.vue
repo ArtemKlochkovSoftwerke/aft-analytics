@@ -36,6 +36,7 @@ defineProps({
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
 .aft-history {
     background-color: var(--aft-bg-light-blue);
 
@@ -44,7 +45,7 @@ defineProps({
         flex-direction: column;
         gap: 55px;
 
-        @media screen and (max-width: 780px){
+        @include devices(tablet-max){
             gap: 16px;
         }
     }
@@ -61,7 +62,7 @@ defineProps({
 
         gap: 72px;
 
-        @media screen and (max-width: 780px){
+        @include devices(tablet-max){
             text-align: center;
             gap: 30px;
             padding: 20px;
@@ -73,7 +74,7 @@ defineProps({
             }
         }
 
-        @media screen and (min-width: 780px){
+        @include devices(tablet-min){
             grid-template-columns: 1fr 2fr;
             &.-reversed {
                 grid-template-columns: 2fr 1fr;
@@ -101,7 +102,7 @@ defineProps({
 
     &__title {
         font: var(--font-h2);
-        @media screen and (max-width: 780px){
+        @include devices(tablet-max){
             font: var(--font-h2-mobile);
         }
     }
@@ -110,7 +111,7 @@ defineProps({
         font: var(--font-h1-mobile);
         text-align: center;
 
-        @media screen and (min-width: 780px){
+        @include devices(tablet-min){
             display: none;
         }
     }
@@ -121,7 +122,7 @@ defineProps({
     }
 
     &__img-container {
-        @media screen and (max-width: 781px){
+        @include devices(tablet-max){
             display: none;
         }
     }
@@ -135,7 +136,7 @@ defineProps({
         justify-content: space-between;
         position: relative;
 
-        @media screen and (min-width: 780px){
+        @include devices(tablet-min){
             padding: var(--aft-space-6);
             &:after {
                 content: '';

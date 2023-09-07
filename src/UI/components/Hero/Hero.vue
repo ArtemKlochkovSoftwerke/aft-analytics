@@ -12,12 +12,13 @@ import Section from '@/UI/components/Section/Section.vue'
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
     .aft-hero {
         background: url('@/assets/img/HeroBG.svg');
         padding: 110px;
         background-size: cover;
 
-        @media screen and (max-width: 780px) {
+        @include devices(tablet-max) {
             padding: 125px 16px 70px;
         }
         &__container {
@@ -27,7 +28,7 @@ import Section from '@/UI/components/Section/Section.vue'
             padding: var(--aft-space-4) var(--aft-space-5);
             text-align: center;
 
-            @media screen and (max-width: 780px) {
+            @include devices(tablet-max) {
                 padding: 45px 16px;
             }
         }
@@ -35,7 +36,7 @@ import Section from '@/UI/components/Section/Section.vue'
         h1 {
             font: var(--font-h1);
 
-            @media screen and (max-width: 780px) {
+            @include devices(tablet-max) {
                 font: var(--font-h1-mobile);
             }
         }
@@ -44,7 +45,7 @@ import Section from '@/UI/components/Section/Section.vue'
             font: var(--font-h2);
             margin: var(--aft-space-7) 0;
 
-            @media screen and (max-width: 780px) {
+            @include devices(tablet-max) {
                 font: var(--font-h2-mobile);
             }
         }

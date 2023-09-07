@@ -80,25 +80,26 @@ const handleToggleList = ({target}) => {
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
     .aft-footer {
         background: #FAFAFA;
         &__container {
             padding: 55px 55px 25px;
 
-            @media screen and (max-width: 780px){
+            @include devices(tablet-big-max){
                 padding: 16px;
             }
         }
 
         &-nav {
-            @media screen and (min-width: 781px){
+            @include devices(tablet-big-min){
                 display: flex;
             }
 
             &__box {
                 display: flex;
 
-                @media (max-width: 780px) {
+                @include devices(tablet-big-max) {
                     gap: 10px;
                     transition: all 0.5s;
 
@@ -131,7 +132,7 @@ const handleToggleList = ({target}) => {
                     }
                 }
 
-                @media (min-width: 781px) {
+                @include devices(tablet-big-min) {
                     display: flex;
                     width: 100%;
                     justify-content: space-around;
@@ -140,7 +141,7 @@ const handleToggleList = ({target}) => {
 
             &__item {
                 padding-bottom: 10px;
-                @media (min-width: 781px) {
+                @include devices(tablet-big-min) {
                     display: flex;
                     justify-content: space-around;
                     padding-bottom: 0;
@@ -183,7 +184,7 @@ const handleToggleList = ({target}) => {
                         transform: rotateZ(180deg);
                     }
                 }
-                @media screen and (min-width: 780px){
+                @include devices(tablet-big-min){
                     display: none;
                 }
             }
@@ -199,7 +200,7 @@ const handleToggleList = ({target}) => {
                 font: var(--font-footer);
                 color: #737373;
 
-                @media screen and (min-width: 781px){
+                @include devices(tablet-big-min){
                     font: var(--font-footer);
                 }
             }
@@ -212,8 +213,8 @@ const handleToggleList = ({target}) => {
             align-items: center;
             justify-content: space-between;
 
-            @media screen and (max-width: 780px){
-                paddin: 16px;
+            @include devices(tablet-big-max){
+                padding: 16px;
             }
 
             &__social {

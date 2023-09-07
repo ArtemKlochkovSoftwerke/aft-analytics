@@ -82,6 +82,47 @@
   --font-weight-footer: 700;
   --font-footer: var(--font-weight-footer) var(--font-size-footer) / var(--font-line-footer) var(--font-family-footer);
 
+  // Desk
+
+  --font-size-h1-desktop: 32px;
+  --font-line-h1-desktop: 42px;
+  --font-weight-h1-desktop: 400;
+  --font-h1-desktop: var(--font-weight-h1-desktop) var(--font-size-h1-desktop) / var(--font-line-h1-desktop) var(--font-family-main);
+
+  --font-size-h2-desktop: 22px;
+  --font-line-h2-desktop: 28px;
+  --font-weight-h2-desktop: 400;
+  --font-h2-desktop: var(--font-weight-h2-desktop) var(--font-size-h2-desktop) / var(--font-line-h2-desktop) var(--font-family-secondary);
+
+  --font-size-h3-desktop: 18px;
+  --font-line-h3-desktop: 28px;
+  --font-weight-h3-desktop: 400;
+  --font-h3-desktop: var(--font-weight-h3-desktop) var(--font-size-h3-desktop) / var(--font-line-h3-desktop) var(--font-family-secondary);
+
+  --font-size-h3-secondary-desktop: 15px;
+  --font-line-h3-secondary-desktop: 19px;
+  --font-weight-h3-secondary-desktop: 400;
+  --font-h3-secondary-desktop: var(--font-weight-h3-secondary-desktop) var(--font-size-h3-secondary-desktop) / var(--font-line-h3-secondary-desktop) var(--font-family-secondary);
+
+  --font-size-h4-desktop: 14px;
+  --font-line-h4-desktop: 18px;
+  --font-weight-h4-desktop: 400;
+  --font-h4-desktop: var(--font-weight-h4-desktop) var(--font-size-h4-desktop) / var(--font-line-h4-desktop) var(--font-family-small-text);
+
+  --font-size-btn-1-desktop: 18px;
+  --font-line-btn-1-desktop: 30px;
+  --font-weight-btn-1-desktop: 400;
+  --font-btn-1-desktop: var(--font-weight-btn-1-desktop) var(--font-size-btn-1-desktop) / var(--font-line-btn-1-desktop) var(--font-family-button);
+
+
+  //--font-size-footer: 14px;
+  //--font-line-footer: 17px;
+  //--font-weight-footer: 700;
+  //--font-footer: var(--font-weight-footer) var(--font-size-footer) / var(--font-line-footer) var(--font-family-footer);
+
+
+
+
   // MOBILE
 
   --font-size-h1-mobile: 26px;

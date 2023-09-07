@@ -20,6 +20,7 @@ import { reactive, computed } from 'vue'
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
     .aft-container {
         max-width: 1440px;
         margin: 0 auto;
@@ -27,7 +28,11 @@ import { reactive, computed } from 'vue'
         &.large {
             padding: 55px 110px;
 
-            @media screen and (max-width: 780px) {
+            @include devices(desktop-max) {
+                padding: 40px 32px;
+            }
+
+            @include devices(tablet-max) {
                 padding: 32px 16px;
             }
         }
@@ -35,7 +40,11 @@ import { reactive, computed } from 'vue'
         &.small {
             padding: 55px;
 
-            @media screen and (max-width: 780px) {
+            @include devices(desktop-max) {
+                padding: 40px;
+            }
+
+            @include devices(tablet-max) {
                 padding: 32px 16px;
             }
         }

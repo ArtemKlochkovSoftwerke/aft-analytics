@@ -32,6 +32,7 @@ defineProps({
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
 .aft-practices {
     background-image: url("src/assets/img/banner/bannerBG.svg");
     background-size: cover;
@@ -42,7 +43,7 @@ defineProps({
         color: #023E8A;
         margin-bottom: 55px;
 
-        @media screen and (max-width: 780px) {
+        @include devices(tablet-max) {
             font: var(--font-h1-mobile);
             margin-bottom: var(--aft-space-7);
         }
@@ -67,11 +68,11 @@ defineProps({
         border-radius: 10px;
         position: relative;
 
-        @media screen and (max-width: 781px){
+        @include devices(tablet-big-max){
             flex: 1 0 calc(50% - 20px);
         }
 
-        @media screen and (min-width: 780px){
+        @include devices(tablet-big-min){
             &:not(:nth-child(6)):after {
                 content: '';
                 position: absolute;

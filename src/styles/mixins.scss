@@ -1,0 +1,44 @@
+@mixin devices ($breakpoint) {
+
+  @if $breakpoint == tablet-max {
+    @media only screen and (max-width: 799.98px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-big-max {
+    @media only screen and (max-width: 991.98px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-max {
+    @media only screen and (max-width: 1123.98px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-min {
+    @media only screen and (min-width: 800px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-big-min {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-min {
+    @media only screen and (min-width: 1124px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 481px) {
+      @content;
+    }
+  }
+}

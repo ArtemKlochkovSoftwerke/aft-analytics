@@ -21,6 +21,7 @@ defineProps({
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
     .aft-button {
         display: inline-block;
         border: none;
@@ -39,8 +40,13 @@ defineProps({
         font: var(--font-btn-1);
         min-width: 200px;
 
-        @media screen and (max-width: 780px) {
+        @include devices(desktop-max) {
+            font: var(--font-btn-1-desktop);
             min-width: 150px;
+        }
+
+        @include devices(tablet-max) {
+            min-width: 130px;
             font: var(--font-btn-1-mobile);
         }
 

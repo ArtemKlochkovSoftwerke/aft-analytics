@@ -13,7 +13,7 @@ defineProps({
 <template>
     <div class="aft-ideas">
         <Section class="aft-ideas__container" container-class="large">
-            <h2>Идеи для повышения производительности</h2>
+            <h2>Идеи для повышения производительности 2</h2>
             <div class="aft-ideas__content">
                 <div class="aft-ideas__content-item"><div>Создайте лучший стратегический план ИТ</div></div>
                 <div class="aft-ideas__content-item"><div>Создайте лучший стратегический план ИТ</div></div>
@@ -30,6 +30,7 @@ defineProps({
 </template>
 
 <style lang="scss">
+@import "src/styles/mixins";
 .aft-ideas {
     background-image: url("src/assets/img/banner/bannerBG.svg");
     background-size: cover;
@@ -49,29 +50,35 @@ defineProps({
         grid-template-columns: repeat(3,1fr);
 
         &-item {
+            --aft-history-padding: 30px;
+
+            @include devices(desktop-max) {
+                --aft-history-padding: 25px;
+            }
+
             div {
                 background: #E4E5EF;
                 font: var(--font-h3);
-                padding: 30px;
+                padding: var( --aft-history-padding);
                 text-align: center;
             }
 
             &:nth-child(1), &:nth-child(2), &:nth-child(3) {
                 border-bottom: 2px solid #58C4A9;
-                padding-bottom: 30px;
+                padding-bottom: var( --aft-history-padding);
             }
 
             &:nth-child(4), &:nth-child(5), &:nth-child(6) {
-                padding-top: 30px;
+                padding-top: var( --aft-history-padding);
             }
 
             &:nth-child(3n - 2), &:nth-child(3n - 1) {
                 border-right: 2px solid #58C4A9;
-                padding-right: 30px;
+                padding-right: var( --aft-history-padding);
             }
 
             &:nth-child(3n - 1), &:nth-child(3n) {
-                padding-left: 30px;
+                padding-left: var( --aft-history-padding);
             }
         }
     }
